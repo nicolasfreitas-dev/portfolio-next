@@ -35,7 +35,7 @@ export default function Projects() {
                                     <h3 className="font-bold text-xl mb-2">
                                         {project.title}
                                     </h3>
-                                    <p className="text-mutedForeground mb-4">
+                                    <p className="text-mutedForeground mb-4 text-justify">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-3 mb-4">
