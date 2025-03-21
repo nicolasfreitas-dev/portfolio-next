@@ -13,8 +13,8 @@ export default function Hero() {
                         </h1>
                         <h2 className="text-5xl font-bold"></h2>
                         <p className="text-xl text-mutedForeground">
-                            Desenvolvedor Fullstack especializado em construir soluções digitais que
-                            fazem a diferença.
+                            Desenvolvedor Fullstack especializado em construir
+                            soluções digitais que fazem a diferença.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-5 pt-4">
                             <Button className="bg-primary text-secondary">
@@ -27,8 +27,14 @@ export default function Hero() {
                                 </Link>
                             </Button>
                             <Button variant="outline">
-                                <Download />
-                                Download CV
+                                <a
+                                    href="/CV_Nicolas_Freitas.pdf"
+                                    download="CV_Nicolas_Freitas.pdf"
+                                    className="flex items-center gap-2"
+                                >
+                                    <Download />
+                                    Download CV
+                                </a>
                             </Button>
                         </div>
                     </div>

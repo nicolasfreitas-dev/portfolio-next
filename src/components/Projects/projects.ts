@@ -1,5 +1,6 @@
 import wisebills from "@/assets/wisebills.jpeg";
 import dripstore from "@/assets/drip-store.png";
+import portfolioNext from "@/assets/portfolio-next.jpeg"
 
 export const projects = [
     {
@@ -7,7 +8,14 @@ export const projects = [
         title: "Wisebills",
         description:
             "Uma aplicação web, desenvolvida seguindo os princípios de mobile first, com o objetivo de facilitar a organização e o gerenciamento financeiro do usuário.",
-        tags: ["Next.js", "Typescript", "Tailwindcss", "Zod", "React Hook Form", "Zustand"],
+        tags: [
+            "Next.js",
+            "Typescript",
+            "Tailwindcss",
+            "Zod",
+            "React Hook Form",
+            "Zustand",
+        ],
         deploy: "https://wisebills-coral.vercel.app/",
         github: "https://github.com/nicolasfreitas-dev/wisebills.git",
     },
@@ -18,5 +26,14 @@ export const projects = [
         tags: ["React", "Tailwindcss", "Javascript"],
         deploy: "https://drip-store-frontend.vercel.app/",
         github: "https://github.com/nicolasfreitas-dev/drip-store-frontend.git",
+    },
+    {
+        image: portfolioNext,
+        title: "Portfolio",
+        description:
+            "Portfolio pessoal com design simples e moderno, desenvolvido utilizando tecnologias atuais no mercado.",
+        tags: ["Next.js", "Tailwindcss", "Typescript"],
+        deploy: "https://nicolasfreitas.vercel.app/",
+        github: "https://github.com/nicolasfreitas-dev/portfolio-next.git",
     },
 ];

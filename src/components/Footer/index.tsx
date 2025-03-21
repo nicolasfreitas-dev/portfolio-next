@@ -4,13 +4,24 @@ import { Button } from "../ui/button";
 import linkedin from "@/assets/linkedin.svg"
 import github from "@/assets/github.svg"
 import Link from "next/link";
+import logopreta from "@/assets/logo-preta.png";
+
 
 export default function Footer() {
     return (
         <footer className="border-t py-8 md:py-12">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <span className="font-bold text-xl">Nicolas Freitas</span>
+                    <div>
+                        <Link href="/">
+                            <Image
+                                src={logopreta}
+                                width={50}
+                                height={50}
+                                alt="logo marca"
+                            />
+                        </Link>
+                    </div>
                     <p className="text-mutedForeground text-sm max-w-[500px]">
                         Desenvolvedor Fullstack especializado em construir
                         soluções digitais que fazem a diferença. Vamos trabalhar
