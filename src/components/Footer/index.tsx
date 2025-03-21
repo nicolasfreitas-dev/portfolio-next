@@ -1,11 +1,9 @@
-import { Mail } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import linkedin from "@/assets/linkedin.svg"
 import github from "@/assets/github.svg"
 import Link from "next/link";
 import logopreta from "@/assets/logo-preta.png";
-
 
 export default function Footer() {
     return (
@@ -55,11 +53,6 @@ export default function Footer() {
                                     width={20}
                                     height={20}
                                 />
-                            </Link>
-                        </Button>
-                        <Button variant="ghost" size="icon">
-                            <Link href="">
-                                <Mail className="h-5 w-5" />
                             </Link>
                         </Button>
                     </div>
