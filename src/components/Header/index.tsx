@@ -2,35 +2,93 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "../ui/button";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-    const {isMenuOpen, setIsMenuOpen} = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const handleMenuOpen = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
 
     return (
-        <header className="w-full h-28 flex items-center justify-between px-10 border-b-2">
+        <header className="sticky top-0 z-10 w-full h-16 border-b bg-secondary/95 backdrop-blur supports-[backdrop-filter]:bg-secondary/60 flex items-center justify-between px-10 md:px-20">
             <div className="h-full flex items-center">
-                <Link href="/" className="font-bold">Nicolas Freitas</Link>
+                <Link href="/" className="font-bold text-xl">
+                    Nicolas Freitas
+                </Link>
             </div>
-            <nav className="flex items-center gap-10">
-                <Link href="/" className="font-bold">
+            <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden"
+                onClick={handleMenuOpen}
+            >
+                {isMenuOpen ? (
+                    <X className="w-6 h-6" />
+                ) : (
+                    <Menu className="w-6 h-6" />
+                )}
+            </Button>
+            <nav className="hidden md:flex items-center gap-5">
+                <Link href="#home" className="text-sm font-medium">
                     Página inicial
                 </Link>
-                <Link href="#" className="font-bold">
+                <Link href="#about" className="text-sm font-medium">
                     Sobre mim
                 </Link>
-                <Link href="#" className="font-bold">
-                    Tecnologias
+                <Link href="#skills" className="text-sm font-medium">
+                    Habilidades
                 </Link>
-                <Link href="#" className="font-bold">
+                <Link href="#projects" className="text-sm font-medium">
                     Projetos
                 </Link>
-                <Link href="#" className="font-bold">
+                <Link href="#contact" className="text-sm font-medium">
                     Contato
                 </Link>
-                <div>
-                    THEME
-                </div>
             </nav>
+            {isMenuOpen && (
+                <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden bg-secondary">
+                    <nav className="flex flex-col gap-3 p-4">
+                        <Link
+                            href="#home"
+                            className="py-2 text-sm font-medium"
+                            onClick={handleMenuOpen}
+                        >
+                            Página inicial
+                        </Link>
+                        <Link
+                            href="#about"
+                            className="py-2 text-sm font-medium"
+                            onClick={handleMenuOpen}
+                        >
+                            Sobre mim
+                        </Link>
+                        <Link
+                            href="#skills"
+                            className="py-2 text-sm font-medium"
+                            onClick={handleMenuOpen}
+                        >
+                            Habilidades
+                        </Link>
+                        <Link
+                            href="#projects"
+                            className="py-2 text-sm font-medium"
+                            onClick={handleMenuOpen}
+                        >
+                            Projetos
+                        </Link>
+                        <Link
+                            href="#contact"
+                            className="py-2 text-sm font-medium"
+                            onClick={handleMenuOpen}
+                        >
+                            Contato
+                        </Link>
+                    </nav>
+                </div>
+            )}
         </header>
-    )
+    );
 };
