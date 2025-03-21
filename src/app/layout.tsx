@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Nicolas Freitas",
   description: "Portfolio pessoal para demonstrar meus projetos e habilidades como Desenvolvedor Fullstack.",
+  icons: {
+    icon: "/favicon.ico"
+  }
 }
 
 export default function RootLayout({
