@@ -1,4 +1,4 @@
-import wisebills from "@/assets/wisebills.jpeg";
+import wisebills from "@/assets/wisebills.png";
 import dripstore from "@/assets/drip-store.png";
 import portfolioNext from "@/assets/portfolio-next.jpeg"
 
