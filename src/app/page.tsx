@@ -1,14 +1,14 @@
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import About from "@/components/about";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import Hero from "@/components/hero";
+import Projects from "@/components/projects";
+import Skills from "@/components/skills";
 
 export default function Home() {
   return (
-      <div className="min-h-screen bg-secondary">
+      <div className="min-h-screen bg-secondary" id="home">
         <Header />
         <main>
           <Hero />
