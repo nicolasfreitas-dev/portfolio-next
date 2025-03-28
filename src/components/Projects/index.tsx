@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/components/Projects/projects";
+import { projects } from "@/utils/projects";
 import github from "@/assets/github.svg";
 
 export default function Projects() {

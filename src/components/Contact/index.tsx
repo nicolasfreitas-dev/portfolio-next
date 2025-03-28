@@ -37,7 +37,7 @@ export default function Contact() {
                             <div>
                                 <h3 className="font-bold">Telefone</h3>
                                 <p className="text-muted-foreground">
-                                    +55 (85) 98551-9571
+                                    (85) 98551-9571
                                 </p>
                             </div>
                         </CardContent>

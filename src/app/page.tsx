@@ -7,17 +7,17 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
 export default function Home() {
-  return (
-      <div className="min-h-screen bg-secondary">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-  );
+    return (
+        <div className="min-h-screen bg-secondary" id="home">
+            <Header />
+            <main>
+                <Hero />
+                <About />
+                <Skills />
+                <Projects />
+                <Contact />
+            </main>
+            <Footer />
+        </div>
+    );
 }

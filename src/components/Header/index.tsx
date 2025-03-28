@@ -14,6 +14,18 @@ export default function Header() {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    const handleScroll = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        targetId: string
+    ) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+        setIsMenuOpen(!isMenuOpen)
+    };
+
     return (
         <header className="sticky top-0 z-10 w-full h-16 border-b bg-secondary/95 backdrop-blur supports-[backdrop-filter]:bg-secondary/60 flex items-center justify-between px-10 md:px-20">
             <div className="h-full flex items-center">
@@ -39,60 +51,80 @@ export default function Header() {
                 )}
             </Button>
             <nav className="hidden md:flex items-center gap-5">
-                <Link href="#home" className="text-sm font-medium">
+                <a
+                    href="#home"
+                    className="text-sm font-medium"
+                    onClick={(e) => handleScroll(e, "home")}
+                >
                     Página inicial
-                </Link>
-                <Link href="#about" className="text-sm font-medium">
+                </a>
+                <a
+                    href="#about"
+                    className="text-sm font-medium"
+                    onClick={(e) => handleScroll(e, "about")}
+                >
                     Sobre mim
-                </Link>
-                <Link href="#skills" className="text-sm font-medium">
+                </a>
+                <a
+                    href="#skills"
+                    className="text-sm font-medium"
+                    onClick={(e) => handleScroll(e, "skills")}
+                >
                     Habilidades
-                </Link>
-                <Link href="#projects" className="text-sm font-medium">
+                </a>
+                <a
+                    href="#projects"
+                    className="text-sm font-medium"
+                    onClick={(e) => handleScroll(e, "projects")}
+                >
                     Projetos
-                </Link>
-                <Link href="#contact" className="text-sm font-medium">
+                </a>
+                <a
+                    href="#contact"
+                    className="text-sm font-medium"
+                    onClick={(e) => handleScroll(e, "contact")}
+                >
                     Contato
-                </Link>
+                </a>
             </nav>
             {isMenuOpen && (
                 <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden bg-secondary">
                     <nav className="flex flex-col gap-3 p-4">
-                        <Link
+                        <a
                             href="#home"
                             className="py-2 text-sm font-medium"
-                            onClick={handleMenuOpen}
+                            onClick={(e) => handleScroll(e, "home")}
                         >
                             Página inicial
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="#about"
                             className="py-2 text-sm font-medium"
-                            onClick={handleMenuOpen}
+                            onClick={(e) => handleScroll(e, "about")}
                         >
                             Sobre mim
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="#skills"
                             className="py-2 text-sm font-medium"
-                            onClick={handleMenuOpen}
+                            onClick={(e) => handleScroll(e, "skills")}
                         >
                             Habilidades
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="#projects"
                             className="py-2 text-sm font-medium"
-                            onClick={handleMenuOpen}
+                            onClick={(e) => handleScroll(e, "projects")}
                         >
                             Projetos
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href="#contact"
                             className="py-2 text-sm font-medium"
-                            onClick={handleMenuOpen}
+                            onClick={(e) => handleScroll(e, "contact")}
                         >
                             Contato
-                        </Link>
+                        </a>
                     </nav>
                 </div>
             )}

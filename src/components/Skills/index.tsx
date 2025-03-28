@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { technologies } from "./skills";
+import { technologies } from "@/utils/skills";
 
 export default function Skills() {
     return (
