@@ -30,12 +30,7 @@ export default function Header() {
         <header className="sticky top-0 z-10 w-full h-16 border-b bg-secondary/95 backdrop-blur supports-[backdrop-filter]:bg-secondary/60 flex items-center justify-between px-10 md:px-20">
             <div className="h-full flex items-center">
                 <Link href="/">
-                    <Image
-                        src={logopreta}
-                        width={50}
-                        height={50}
-                        alt="logo marca"
-                    />
+                    <p className="font-bold">Nicolas<span className="text-mutedForeground">.dev</span></p>
                 </Link>
             </div>
             <Button
