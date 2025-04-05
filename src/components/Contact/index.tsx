@@ -63,7 +63,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold">Linkedin</h3>
-                                    <p className="text-muted-foreground">
+                                    <p className="text-muted-foreground overflow-hidden text-ellipsis break-all">
                                         https://www.linkedin.com/in/nicolasfreitas-dev/
                                     </p>
                                 </div>
