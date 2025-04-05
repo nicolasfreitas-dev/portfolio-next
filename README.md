@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    Portfólio pessoal com design simples e moderno, desenvolvido utilizando tecnologias atuais no mercado para demonstrar minhas habilidades e projetos.
+    Portfólio profissional com design simples e moderno, desenvolvido utilizando tecnologias atuais no mercado para demonstrar minhas habilidades e projetos que já desenvolvi.
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 <h2 id="layout">🎨 Layout</h2>
 
-![image](https://github.com/user-attachments/assets/7bcf81bf-0e39-4394-b4b9-caf98e22d6fe)
+<img src="./src/assets/portfolio-next.jpeg" alt="portfolio-next home page">
 
 
 <h2 id="tech">💻 Tecnologias</h2>
