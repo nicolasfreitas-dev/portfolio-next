@@ -1,4 +1,8 @@
-export const useSmoothScroll = (toggleMenu: (isOpen: boolean) => void) => {
+type SmoothScrollProps = {
+    toggleMenu?: (isOpen: boolean) => void
+}
+
+export const useSmoothScroll = ({ toggleMenu }: SmoothScrollProps = {}) => {
     const handleScroll = (
         e: React.MouseEvent<HTMLAnchorElement>,
         targetId: string
@@ -9,7 +13,9 @@ export const useSmoothScroll = (toggleMenu: (isOpen: boolean) => void) => {
             targetElement.scrollIntoView({ behavior: "smooth" });
         }
 
-        toggleMenu(false)
+        if (toggleMenu) {
+            toggleMenu(false)
+        }
     }
 
     return { handleScroll }
