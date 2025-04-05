@@ -1,17 +1,22 @@
+'use client'
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import linkedin from "@/assets/linkedin.svg"
 import github from "@/assets/github.svg"
 import Link from "next/link";
 import logopreta from "@/assets/logo-preta.png";
+import { useSmoothScroll } from '@/hooks/useSmoothScroll';
 
 export default function Footer() {
+    const { handleScroll } = useSmoothScroll()
+
     return (
         <footer className="border-t py-8 md:py-12">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <div>
-                        <Link href="/">
+                        <Link href="/" onClick={(e) => handleScroll(e, "home")}>
                             <Image
                                 src={logopreta}
                                 width={50}
