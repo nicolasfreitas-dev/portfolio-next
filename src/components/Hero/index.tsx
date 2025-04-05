@@ -1,8 +1,21 @@
+'use client'
+
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
+    const handleScroll = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        targetId: string
+    ) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
     return (
         <section id="home" className="relative py-20 md:py-36 overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
@@ -21,6 +34,7 @@ export default function Hero() {
                                 <Link
                                     href="#projects"
                                     className="flex items-center font-bold"
+                                    onClick={(e) => handleScroll(e, "projects")}
                                 >
                                     Confira meus trabalhos
                                     <ArrowRight className="ml-2 w-4 h-4" />
