@@ -32,63 +32,67 @@ export default function Contact() {
                             </div>
                         </CardContent>
                     </Card>
-                    <Card className="w-full">
-                        <CardContent className="p-6 flex items-center gap-4">
-                            <div className="bg-primary/10 p-3 rounded-full">
-                                <Phone className="h-6 w-6 text-primary" />
-                            </div>
-                            <div>
-                                <h3 className="font-bold">Telefone</h3>
-                                <p className="text-muted-foreground">
-                                    (85) 98551-9571
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
-                    <Card className="w-full">
-                        <CardContent className="p-6 flex items-center gap-4">
-                            <div className="bg-primary/10 p-3 rounded-full">
-                                <Image
-                                    src={linkedin}
-                                    className="h-6 w-6 text-primary"
-                                    alt="linkedin icon"
-                                />
-                            </div>
-                            <div>
-                                <h3 className="font-bold">Linkedin</h3>
-                                <p className="text-muted-foreground">
-                                    <a
-                                        href="https://www.linkedin.com/in/nicolasfreitas-dev/"
-                                        target="_blank"
-                                    >
+                    <a className="w-full" href="https://api.whatsapp.com/send?phone=85985519571" target="_blank">
+                        <Card className="w-full">
+                            <CardContent className="p-6 flex items-center gap-4">
+                                <div className="bg-primary/10 p-3 rounded-full">
+                                    <Phone className="h-6 w-6 text-primary" />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold">Telefone</h3>
+                                    <p className="text-muted-foreground">
+                                        (85) 98551-9571
+                                    </p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </a>
+                    <a
+                        className="w-full"
+                        href="https://www.linkedin.com/in/nicolasfreitas-dev/"
+                        target="_blank"
+                    >
+                        <Card className="w-full">
+                            <CardContent className="p-6 flex items-center gap-4">
+                                <div className="bg-primary/10 p-3 rounded-full">
+                                    <Image
+                                        src={linkedin}
+                                        className="h-6 w-6 text-primary"
+                                        alt="linkedin icon"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold">Linkedin</h3>
+                                    <p className="text-muted-foreground">
                                         https://www.linkedin.com/in/nicolasfreitas-dev/
-                                    </a>
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
-                    <Card className="w-full">
-                        <CardContent className="p-6 flex items-center gap-4">
-                            <div className="bg-primary/10 p-3 rounded-full">
-                                <Image
-                                    src={github}
-                                    className="h-6 w-6 text-primary"
-                                    alt="github icon"
-                                />
-                            </div>
-                            <div>
-                                <h3 className="font-bold">Github</h3>
-                                <p className="text-muted-foreground">
-                                    <a
-                                        href="https://github.com/nicolasfreitas-dev"
-                                        target="_blank"
-                                    >
+                                    </p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </a>
+                    <a
+                        className="w-full"
+                        href="https://github.com/nicolasfreitas-dev"
+                        target="_blank"
+                    >
+                        <Card>
+                            <CardContent className="p-6 flex items-center gap-4">
+                                <div className="bg-primary/10 p-3 rounded-full">
+                                    <Image
+                                        src={github}
+                                        className="h-6 w-6 text-primary"
+                                        alt="github icon"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 className="font-bold">Github</h3>
+                                    <p className="text-muted-foreground">
                                         https://github.com/nicolasfreitas-dev
-                                    </a>
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
+                                    </p>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </a>
                 </div>
             </div>
         </section>
