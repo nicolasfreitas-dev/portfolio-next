@@ -22,7 +22,7 @@ export default function Projects() {
                 <div className="grid gap-6 sm:grid-cols-2">
                     {projects.map((project, index) => {
                         return (
-                            <Card key={index} className="overflow-hidden group">
+                            <Card key={index} className="max-w-xl overflow-hidden group">
                                 <div className="relative overflow-hidden aspect-video">
                                     <Image
                                         src={project.image}
@@ -56,7 +56,7 @@ export default function Projects() {
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
-                                                Demonstração
+                                                Site
                                             </Link>
                                         </Button>
                                         <Button variant="outline" size="sm">
