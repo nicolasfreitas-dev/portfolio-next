@@ -1,6 +1,7 @@
-import wisebills from "@/assets/wisebills.png";
-import dripstore from "@/assets/drip-store.png";
-import portfolioNext from "@/assets/portfolio-next.jpeg"
+import wisebills from "@/assets/wisebills.png"
+import dripstore from "@/assets/drip-store.png"
+import portfolioNext from "@/assets/portfolio-next.png"
+import fitzone from "@/assets/fitzone.png"
 
 export const projects = [
     {
@@ -20,12 +21,13 @@ export const projects = [
         github: "https://github.com/nicolasfreitas-dev/wisebills.git",
     },
     {
-        image: dripstore,
-        title: "Drip Store",
-        description: "E-commerce para venda de roupas e produtos esportivos.",
-        tags: ["React", "Javascript", "Tailwindcss"],
-        deploy: "https://drip-store-frontend.vercel.app/",
-        github: "https://github.com/nicolasfreitas-dev/drip-store-frontend.git",
+        image: fitzone,
+        title: "FitZone",
+        description:
+            "Landing page para uma academia com um atraente. Apresentando um pouco da história da academia, suas conquistas, modalidades esportivas ofertadas e planos com pacotes mensais e anuais.",
+        tags: ["React", "Typescript", "SCSS"],
+        deploy: "https://fitzone-page.vercel.app/",
+        github: "https://github.com/nicolasfreitas-dev/fitzone.git",
     },
     {
         image: portfolioNext,
@@ -35,5 +37,13 @@ export const projects = [
         tags: ["Next.js", "Typescript", "Tailwindcss"],
         deploy: "https://nicolasfreitas.vercel.app/",
         github: "https://github.com/nicolasfreitas-dev/portfolio-next.git",
+    },
+    {
+        image: dripstore,
+        title: "Drip Store",
+        description: "E-commerce para venda de roupas e produtos esportivos.",
+        tags: ["React", "Javascript", "Tailwindcss"],
+        deploy: "https://drip-store-frontend.vercel.app/",
+        github: "https://github.com/nicolasfreitas-dev/drip-store-frontend.git",
     },
 ];
