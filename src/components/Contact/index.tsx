@@ -13,7 +13,7 @@ export default function Contact() {
                         Contate-me
                     </h2>
                     <div className="w-12 h-1 bg-primary rounded-full"></div>
-                    <p className="max-w-[700px] text-muted-foreground md:text-lg">
+                    <p className="max-w-[700px] text-primary md:text-lg">
                         Tem um projeto em mente ou gostaria de discutir uma
                         potencial oportunidade? Sinta-se livre para me contatar.
                     </p>

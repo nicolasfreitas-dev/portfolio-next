@@ -18,12 +18,13 @@ export default function About() {
                             width={350}
                             height={350}
                             alt="profile photo"
+                            loading="lazy"
                         />
                     </div>
                 </div>
                 <div className="md:w-4/5 h-full space-y-4 text-justify">
                     <h3 className="text-2xl font-bold">Quem sou eu</h3>
-                    <p className="text-mutedForeground">
+                    <p className="text-primary">
                         Olá! Me chamo Nicolas Freitas, Desenvolvedor Fullstack e
                         atualmente estou cursando Análise e Desenvolvimento de
                         Sistemas, possuo sólidos conhecimentos em HTML, CSS,

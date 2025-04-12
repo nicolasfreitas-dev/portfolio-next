@@ -25,13 +25,13 @@ export default function Footer() {
                             />
                         </Link>
                     </div>
-                    <p className="text-mutedForeground text-sm max-w-[500px]">
+                    <p className="text-primary text-sm max-w-[500px]">
                         Desenvolvedor Fullstack especializado em construir
                         soluções digitais que fazem a diferença. Vamos trabalhar
                         juntos para trazer suas ideias a vida.
                     </p>
                     <div className="flex items-center gap-5">
-                        <Button variant="ghost" size="icon">
+                        <Button variant="ghost" size="icon" type="button">
                             <Link
                                 href="https://github.com/nicolasfreitas-dev"
                                 target="_blank"
@@ -46,7 +46,7 @@ export default function Footer() {
                                 />
                             </Link>
                         </Button>
-                        <Button variant="ghost" size="icon">
+                        <Button variant="ghost" size="icon" type="button">
                             <Link
                                 href="https://www.linkedin.com/in/nicolasfreitas-dev/"
                                 target="_blank"
@@ -62,7 +62,7 @@ export default function Footer() {
                         </Button>
                     </div>
                     <div>
-                        <span className="text-sm text-mutedForeground">
+                        <span className="text-sm text-primary">
                             © {new Date().getFullYear()} Nicolas Freitas. Todos
                             os direitos reservados.
                         </span>

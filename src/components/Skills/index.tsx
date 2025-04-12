@@ -8,7 +8,7 @@ export default function Skills() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                     <h2 className="text-3xl font-bold">Habilidades</h2>
                     <hr className="w-12 h-1 bg-primary rounded-full" />
-                    <p className="max-w-[720px] md:text-lg text-mutedForeground">Tecnologias com as quais trabalho</p>
+                    <p className="max-w-[720px] md:text-lg text-primary">Tecnologias com as quais trabalho</p>
                 </div>
                 <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 md:gap-12">
                     {technologies.map((tech, index) => {

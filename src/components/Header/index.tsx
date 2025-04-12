@@ -21,6 +21,7 @@ export default function Header() {
                 variant="ghost"
                 size="icon"
                 className="md:hidden"
+                type="button"
                 onClick={() => handleMenuOpen(!isMenuOpen)}
             >
                 {isMenuOpen ? (
@@ -32,35 +33,35 @@ export default function Header() {
             <nav className="hidden md:flex items-center gap-5">
                 <a
                     href="#home"
-                    className="text-sm font-medium"
+                    className="text-sm font-medium p-2"
                     onClick={(e) => handleScroll(e, "home")}
                 >
                     Página inicial
                 </a>
                 <a
                     href="#about"
-                    className="text-sm font-medium"
+                    className="text-sm font-medium p-2"
                     onClick={(e) => handleScroll(e, "about")}
                 >
                     Sobre mim
                 </a>
                 <a
                     href="#skills"
-                    className="text-sm font-medium"
+                    className="text-sm font-medium p-2"
                     onClick={(e) => handleScroll(e, "skills")}
                 >
                     Habilidades
                 </a>
                 <a
                     href="#projects"
-                    className="text-sm font-medium"
+                    className="text-sm font-medium p-2"
                     onClick={(e) => handleScroll(e, "projects")}
                 >
                     Projetos
                 </a>
                 <a
                     href="#contact"
-                    className="text-sm font-medium"
+                    className="text-sm font-medium p-2"
                     onClick={(e) => handleScroll(e, "contact")}
                 >
                     Contato
@@ -71,35 +72,35 @@ export default function Header() {
                     <nav className="flex flex-col gap-3 p-4">
                         <a
                             href="#home"
-                            className="py-2 text-sm font-medium"
+                            className="p-2 text-sm font-medium"
                             onClick={(e) => handleScroll(e, "home")}
                         >
                             Página inicial
                         </a>
                         <a
                             href="#about"
-                            className="py-2 text-sm font-medium"
+                            className="p-2 text-sm font-medium"
                             onClick={(e) => handleScroll(e, "about")}
                         >
                             Sobre mim
                         </a>
                         <a
                             href="#skills"
-                            className="py-2 text-sm font-medium"
+                            className="p-2 text-sm font-medium"
                             onClick={(e) => handleScroll(e, "skills")}
                         >
                             Habilidades
                         </a>
                         <a
                             href="#projects"
-                            className="py-2 text-sm font-medium"
+                            className="p-2 text-sm font-medium"
                             onClick={(e) => handleScroll(e, "projects")}
                         >
                             Projetos
                         </a>
                         <a
                             href="#contact"
-                            className="py-2 text-sm font-medium"
+                            className="p-2 text-sm font-medium"
                             onClick={(e) => handleScroll(e, "contact")}
                         >
                             Contato

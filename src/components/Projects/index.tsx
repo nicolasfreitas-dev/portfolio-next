@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "../ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,7 +12,7 @@ export default function Projects() {
                 <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
                     <h2 className="text-3xl font-bold">Projetos</h2>
                     <hr className="w-12 h-1 bg-primary rounded-full" />
-                    <p className="max-w-[760px] md:text-lg text-mutedForeground">
+                    <p className="max-w-[760px] md:text-lg text-primary">
                         Aqui estão alguns dos meus projetos recentes. Cada um
                         foi construído pensando em solucionar um problema
                         específico ou para explorar uma nova tecnologia.
@@ -22,7 +21,10 @@ export default function Projects() {
                 <div className="grid gap-6 sm:grid-cols-2">
                     {projects.map((project, index) => {
                         return (
-                            <Card key={index} className="max-w-xl overflow-hidden group">
+                            <Card
+                                key={index}
+                                className="max-w-xl overflow-hidden group"
+                            >
                                 <div className="relative overflow-hidden aspect-video">
                                     <Image
                                         src={project.image}
@@ -35,7 +37,7 @@ export default function Projects() {
                                     <h3 className="font-bold text-xl mb-2">
                                         {project.title}
                                     </h3>
-                                    <p className="text-mutedForeground mb-4 text-justify">
+                                    <p className="text-primary pb-4 text-justify">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-3 mb-4">
@@ -49,32 +51,30 @@ export default function Projects() {
                                         ))}
                                     </div>
                                     <div className="flex gap-2">
-                                        <Button variant="outline" size="sm">
-                                            <ExternalLink className="h-4 w-4 mr-1" />
-                                            <Link
-                                                href={project.deploy}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                Site
-                                            </Link>
-                                        </Button>
-                                        <Button variant="outline" size="sm">
+                                        <Link
+                                            href={project.deploy}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center text-sm border border-input px-3 py-1 rounded-md"
+                                        >
+                                            <ExternalLink className="h-4 w-4 mr-2" />
+                                            Site
+                                        </Link>
+                                        <Link
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center text-sm border border-input px-3 py-1 rounded-md"
+                                        >
                                             <Image
                                                 src={github}
                                                 alt="github icon"
                                                 width={16}
                                                 height={16}
-                                                className="h-4 w-4 mr-1"
+                                                className="h-4 w-4 mr-2"
                                             />
-                                            <Link
-                                                href={project.github}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                Código
-                                            </Link>
-                                        </Button>
+                                            Código
+                                        </Link>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -82,23 +82,21 @@ export default function Projects() {
                     })}
                 </div>
                 <div className="flex justify-center mt-12">
-                    <Button variant="outline">
-                        <Link
-                            href="https://github.com/nicolasfreitas-dev"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center"
-                        >
-                            <Image
-                                src={github}
-                                alt="github icon"
-                                width={16}
-                                height={16}
-                                className="h-4 w-4 mr-2"
-                            />
-                            Veja mais no meu GitHub
-                        </Link>
-                    </Button>
+                    <Link
+                        href="https://github.com/nicolasfreitas-dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center border border-input px-4 py-2 rounded-md overflow-auto"
+                    >
+                        <Image
+                            src={github}
+                            alt="github icon"
+                            width={16}
+                            height={16}
+                            className="h-4 w-4 mr-2"
+                        />
+                        Veja mais no meu GitHub
+                    </Link>
                 </div>
             </div>
         </section>
