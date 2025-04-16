@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-secondary" id="home">
+        <div className="min-h-screen bg-main" id="home">
             <Header />
             <main>
                 <Hero />
