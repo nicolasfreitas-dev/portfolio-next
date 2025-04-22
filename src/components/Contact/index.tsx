@@ -1,11 +1,16 @@
+'use client'
+
 import { Copy, Mail, Phone } from "lucide-react";
 import { Card, CardContent } from "../ui/card";
 import linkedin from "@/assets/linkedin.svg"
 import github from "@/assets/github.svg"
 import Image from "next/image";
 import { Button } from "../ui/button";
+import { useRef } from "react";
 
 export default function Contact() {
+    const emailElement = useRef<HTMLParagraphElement>(null)
+
     return (
         <section id="contact" className="py-16 md:24 text-white">
             <div className="container px-4 md:px-6">
@@ -29,7 +34,7 @@ export default function Contact() {
                                 </div>
                                 <div>
                                     <h3 className="font-bold">Email</h3>
-                                    <p className="text-muted-foreground">
+                                    <p className="text-muted-foreground" ref={emailElement}>
                                         nicolasfpdev@gmail.com
                                     </p>
                                 </div>
@@ -38,6 +43,11 @@ export default function Contact() {
                                 <Button
                                     type="button"
                                     className="flex items-center text-sm font-medium bg-accent-deep text-secondary rounded-md hover:bg-accent-light px-3 py-1"
+                                    onClick={ () => {
+                                        if (emailElement.current) {
+                                            navigator.clipboard.writeText(emailElement.current?.innerText || "")
+                                        }
+                                    }}
                                 >
                                     <Copy className="h-6 w-6 text-primary" />
                                     Copiar
