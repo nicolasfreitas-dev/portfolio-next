@@ -34,14 +34,15 @@ export const projects = [
         title: "Portfolio",
         description:
             "Portfolio profissional com design simples e moderno, desenvolvido utilizando tecnologias atuais no mercado.",
-        tags: ["Next.js", "Typescript", "Tailwindcss"],
+        tags: ["Next.js", "Typescript", "Tailwindcss", "Framer Motion"],
         deploy: "https://nicolasfreitas.vercel.app/",
         github: "https://github.com/nicolasfreitas-dev/portfolio-next.git",
     },
     {
         image: dripstore,
         title: "Drip Store",
-        description: "E-commerce para venda de roupas e produtos esportivos.",
+        description:
+            "E-commerce para venda de roupas e produtos esportivos. O foco deste projeto foi desenvolvedor o site na versão desktop, sem incluir responsividade.",
         tags: ["React", "Javascript", "Tailwindcss"],
         deploy: "https://drip-store-frontend.vercel.app/",
         github: "https://github.com/nicolasfreitas-dev/drip-store-frontend.git",
