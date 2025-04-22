@@ -1,16 +1,13 @@
 'use client'
 
-import { Copy, Mail, Phone } from "lucide-react";
-import { Card, CardContent } from "../ui/card";
+import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
+import { Mail, Phone } from "lucide-react"
+import { motion } from "framer-motion"
 import linkedin from "@/assets/linkedin.svg"
 import github from "@/assets/github.svg"
-import Image from "next/image";
-import { Button } from "../ui/button";
-import { useRef } from "react";
 
 export default function Contact() {
-    const emailElement = useRef<HTMLParagraphElement>(null)
-
     return (
         <section id="contact" className="py-16 md:24 text-white">
             <div className="container px-4 md:px-6">
@@ -25,33 +22,31 @@ export default function Contact() {
                         potencial oportunidade? Sinta-se livre para me contatar.
                     </p>
                 </div>
-                <div className="max-w-[720px] flex flex-col gap-6 items-center justify-center mx-auto">
+                <motion.div 
+                    className="max-w-[720px] flex flex-col gap-6 items-center justify-center mx-auto"
+                    initial={{ opacity: 0, y: 100 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        transition={{
+                            duration: 1,
+                            ease: "easeOut",
+                            delay: 0.3,
+                        }}
+                    >
                     <Card className="w-full hover:bg-accent-light/10">
-                        <CardContent className="p-6 flex items-center justify-between">
+                        <CardContent className="p-6 flex flex-wrap items-center justify-between">
                             <div className="flex items-center gap-4">
                                 <div className="bg-primary/10 p-3 rounded-full">
                                     <Mail className="h-6 w-6 text-primary" />
                                 </div>
                                 <div>
                                     <h3 className="font-bold">Email</h3>
-                                    <p className="text-muted-foreground" ref={emailElement}>
+                                    <p className="text-muted-foreground">
                                         nicolasfpdev@gmail.com
                                     </p>
                                 </div>
-                            </div>
-                            <div>
-                                <Button
-                                    type="button"
-                                    className="flex items-center text-sm font-medium bg-accent-deep text-secondary rounded-md hover:bg-accent-light px-3 py-1"
-                                    onClick={ () => {
-                                        if (emailElement.current) {
-                                            navigator.clipboard.writeText(emailElement.current?.innerText || "")
-                                        }
-                                    }}
-                                >
-                                    <Copy className="h-6 w-6 text-primary" />
-                                    Copiar
-                                </Button>
                             </div>
                         </CardContent>
                     </Card>
@@ -120,7 +115,7 @@ export default function Contact() {
                             </CardContent>
                         </Card>
                     </a>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

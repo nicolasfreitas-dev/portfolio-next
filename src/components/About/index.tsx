@@ -1,4 +1,7 @@
+'use client'
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import profilePhoto from "@/assets/profile.jpeg"
 
 export default function About() {
@@ -12,7 +15,19 @@ export default function About() {
             </div>
             <div className="grid md:grid-cols-2 gap-8 ld:gap-12 items-center px-4 md:px-6">
                 <div className="flex justify-center">
-                    <div className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-4 border-accent-dark">
+                    <motion.div
+                        className="relative w-[250px] h-[250px] md:w-[350px] md:h-[350px] rounded-full overflow-hidden border-4 border-accent-dark"
+                        initial={{ opacity: 0, y: 100 }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                        }}
+                        transition={{
+                            duration: 1,
+                            ease: "easeOut",
+                            delay: 0.3,
+                        }}
+                    >
                         <Image
                             src={profilePhoto}
                             width={350}
@@ -20,9 +35,17 @@ export default function About() {
                             alt="profile photo"
                             loading="lazy"
                         />
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="md:w-4/5 h-full space-y-4 text-justify">
+                <motion.div
+                    className="md:w-4/5 h-full space-y-4 text-justify"
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                    }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                >
                     <h3 className="text-2xl font-bold text-accent">
                         Quem sou eu
                     </h3>
@@ -36,7 +59,7 @@ export default function About() {
                         comunicativas que me permitem buscar soluções eficientes
                         para resolução de problemas e trabalhar bem em equipe.
                     </p>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

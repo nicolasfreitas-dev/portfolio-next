@@ -1,5 +1,8 @@
-import Image from "next/image";
-import { technologies } from "@/utils/skills";
+'use client'
+
+import Image from "next/image"
+import { motion } from "framer-motion"
+import { technologies } from "@/utils/skills"
 
 export default function Skills() {
     return (
@@ -12,12 +15,35 @@ export default function Skills() {
                         Tecnologias com as quais trabalho
                     </p>
                 </div>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 md:gap-12">
+                <motion.div
+                    className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 md:gap-12"
+                    initial="hidden"
+                    whileInView="show"
+                    variants={{
+                        hidden: {},
+                        show: {
+                            transition: {
+                                staggerChildren: 0.3,
+                            },
+                        },
+                    }}
+                >
                     {technologies.map((tech, index) => {
                         return (
-                            <div
+                            <motion.div
                                 key={index}
                                 className="flex flex-col items-center justify-center group"
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: {
+                                            duration: 1,
+                                            ease: "easeInOut",
+                                        },
+                                    },
+                                }}
                             >
                                 <div className="relative p-6 rounded-full bg-highlight transition-all duration-300 hover:bg-accent-light/10 hover:shadow-lg">
                                     <Image
@@ -31,10 +57,10 @@ export default function Skills() {
                                 <span className="mt-3 text-sm text-accent font-medium">
                                     {tech.name}
                                 </span>
-                            </div>
+                            </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

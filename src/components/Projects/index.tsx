@@ -1,9 +1,11 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "../ui/button";
-import { ExternalLink } from "lucide-react";
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { projects } from "@/utils/projects";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 import github from "@/assets/github-black.svg";
 
 export default function Projects() {
@@ -22,12 +24,35 @@ export default function Projects() {
                         específico ou para explorar uma nova tecnologia.
                     </p>
                 </div>
-                <div className="grid gap-6 sm:grid-cols-3">
+                <motion.div
+                    className="grid gap-6 sm:grid-cols-3"
+                    initial="hidden"
+                    whileInView="show"
+                    variants={{
+                        hidden: {},
+                        show: {
+                            transition: {
+                                staggerChildren: 0.5,
+                            },
+                        },
+                    }}
+                >
                     {projects.map((project, index) => {
                         return (
-                            <Card
+                            <motion.div
+                                className="flex flex-col justify-between h-full rounded-xl border border-accent-dark text-white shadow-sm overflow-hidden group bg-background"
                                 key={index}
-                                className="max-w-xl overflow-hidden group transform hover:scale-105 transition-all ease-in-out duration-300"
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    show: {
+                                        opacity: 1,
+                                        y: 0,
+                                        transition: {
+                                            duration: 0.8,
+                                            ease: "easeInOut",
+                                        },
+                                    },
+                                }}
                             >
                                 <div className="relative overflow-hidden aspect-video">
                                     <Image
@@ -37,14 +62,14 @@ export default function Projects() {
                                         className="object-cover object-left transition-transform duration-300 group-hover:scale-105"
                                     />
                                 </div>
-                                <CardContent className="p-6">
+                                <div className="flex flex-col flex-grow p-6">
                                     <h3 className="font-bold text-xl mb-2 text-accent">
                                         {project.title}
                                     </h3>
-                                    <p className="mb-4 text-justify">
+                                    <p className=" mb-4 text-justify">
                                         {project.description}
                                     </p>
-                                    <div className="flex flex-wrap gap-3 mb-4">
+                                    <div className="flex flex-wrap gap-2 mt-auto">
                                         {project.tags.map((tag, tagIndex) => (
                                             <span
                                                 key={tagIndex}
@@ -54,37 +79,37 @@ export default function Projects() {
                                             </span>
                                         ))}
                                     </div>
-                                    <div className="flex gap-2 text-accent">
-                                        <Link
-                                            href={project.deploy}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center text-sm font-medium bg-accent-deep text-secondary rounded-md hover:bg-accent-light px-3 py-1"
-                                        >
-                                            <ExternalLink className="h-4 w-4 mr-2" />
-                                            Site
-                                        </Link>
-                                        <Link
-                                            href={project.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center text-sm font-medium bg-accent-deep text-secondary rounded-md hover:bg-accent-light px-3 py-1"
-                                        >
-                                            <Image
-                                                src={github}
-                                                alt="github icon"
-                                                width={16}
-                                                height={16}
-                                                className="h-4 w-4 mr-2"
-                                            />
-                                            Código
-                                        </Link>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                                </div>
+                                <div className="flex gap-2 px-6 pb-6 mt-4 text-accent">
+                                    <Link
+                                        href={project.deploy}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center text-sm font-medium bg-accent-deep text-secondary rounded-md hover:bg-accent-light px-3 py-1"
+                                    >
+                                        <ExternalLink className="h-4 w-4 mr-2" />
+                                        Site
+                                    </Link>
+                                    <Link
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center text-sm font-medium bg-accent-deep text-secondary rounded-md hover:bg-accent-light px-3 py-1"
+                                    >
+                                        <Image
+                                            src={github}
+                                            alt="github icon"
+                                            width={16}
+                                            height={16}
+                                            className="h-4 w-4 mr-2"
+                                        />
+                                        Código
+                                    </Link>
+                                </div>
+                            </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
                 <div className="flex justify-center mt-12 text-accent">
                     <Button className="flex items-center text-sm font-medium bg-accent-deep text-secondary px-4 py-2 rounded-md hover:bg-accent-light">
                         <Link
