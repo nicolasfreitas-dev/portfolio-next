@@ -70,7 +70,7 @@ export default function Hero() {
                             </Link>
                             <a
                                 href="/CV_Nicolas_Freitas.pdf"
-                                download="CV_Nicolas_Freitas.pdf"
+                                target="_blank"
                                 className="flex items-center gap-2 text-accent border border-accent-dark px-4 py-2 rounded-md hover:bg-accent-light hover:text-secondary"
                             >
                                 <Download className="w-4 h-4" />
