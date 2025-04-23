@@ -21,8 +21,6 @@
 
 <img src="./src/assets/portfolio-next.png" alt="Home page portfolio">
 
-<h4 align="center">🚧 Projeto em construção...  🚧</h4>
-
 <h2 id="#about">📌 Sobre o projeto</h2>
 
 <p>
