@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { projects } from "@/utils/projects";
-import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import github from "@/assets/github-black.svg";
 
@@ -111,23 +110,21 @@ export default function Projects() {
                     })}
                 </motion.div>
                 <div className="flex justify-center mt-12 text-accent">
-                    <Button className="flex items-center text-sm font-medium bg-accent-deep text-secondary px-4 py-2 rounded-md hover:bg-accent-light">
-                        <Link
-                            href="https://github.com/nicolasfreitas-dev"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center"
-                        >
-                            <Image
-                                src={github}
-                                alt="github icon"
-                                width={16}
-                                height={16}
-                                className="h-4 w-4 mr-2"
-                            />
-                            Veja mais no meu GitHub
-                        </Link>
-                    </Button>
+                    <Link
+                        href="https://github.com/nicolasfreitas-dev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-sm font-medium bg-accent-deep text-secondary px-4 py-2 rounded-md hover:bg-accent-light"
+                    >
+                        <Image
+                            src={github}
+                            alt="github icon"
+                            width={16}
+                            height={16}
+                            className="h-4 w-4 mr-2"
+                        />
+                        Veja mais no meu GitHub
+                    </Link>
                 </div>
             </div>
         </section>
